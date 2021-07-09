@@ -1,0 +1,56 @@
+.profile-title {
+  padding: $padding;
+  background-color: $primary-clr;
+  border-radius: $border-radius;
+  color: $primary-font-clr;
+  margin: 2rem auto;
+  box-shadow: $box-shadow;
+}
+
+/*
+*   Vertical profile tabs
+*/
+/* Style the tab */
+.profile-tabs {
+  float: left;
+  border: 1px solid $border-clr;
+  background-color: $secondary-white;
+  width: 320px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-family: $font-sans-serif-mons;
+  font-weight: 500;
+}
+
+/* Style the buttons that are used to open the tab content */
+.profile-tabs button {
+  display: block;
+  background-color: inherit;
+  color: $primary-font-clr;
+  padding: 16px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.profile-tabs button:hover {
+  transition: $main-transition;
+  background-color: lighten($color: $primary-clr, $amount: 30%);
+}
+
+/* Create an active/current "tab button" class */
+.profile-tabs button.active {
+  background-color: $primary-clr;
+  color: $primary-font-clr;
+}
+
+/* Style the tab content */
+.profile-tabcontent {
+  float: left;
+  padding: $padding;
+  min-width: 650px;
+}

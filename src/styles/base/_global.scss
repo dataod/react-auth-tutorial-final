@@ -1,0 +1,48 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  font-family: $font-sans-serif;
+  background: $primary-white;
+  color: $primary-font-clr;
+  font-size: 1em;
+  margin: auto;
+  -moz-osx-font-smoothing: grayscale; // Fonts on OS X will look more consistent with other systems
+  -webkit-font-smoothing: antialiased; // Prevents font "thickness" flickering when animations start and stop
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.spacer-2rem {
+  padding: 2rem 0;
+}
+
+.spacer-5rem {
+  padding: 5rem 0;
+}

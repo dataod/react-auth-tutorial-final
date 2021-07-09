@@ -1,0 +1,54 @@
+.feedback-wrapper {
+  width: 800px;
+  border: 1px solid $border-clr;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  border-top: none;
+  margin: 1rem;
+}
+
+.feedback-header {
+  padding: $padding;
+  background-color: $primary-dark;
+  color: $primary-white;
+  font-weight: 600;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  justify-content: space-between;
+}
+
+.rating-stars {
+  margin-left: 0.5rem;
+}
+
+.feedback-container {
+  border: 1px solid $border-clr;
+  border-radius: $border-radius;
+  margin: 1rem;
+}
+
+.feedback-text {
+  padding: $padding;
+  margin: 0.25rem;
+  background-color: $secondary-white;
+  font-style: oblique;
+  p {
+    margin-top: 1rem;
+    font-style: normal;
+    font-size: small;
+    color: $secondary-font-clr;
+  }
+}
+
+.feedback-input {
+  padding: $padding;
+}
+
+.feedback-textfield {
+  margin: 0.5rem 0;
+}
+
+.feedback-box {
+  margin: 0.5rem;
+  justify-content: space-between;
+}

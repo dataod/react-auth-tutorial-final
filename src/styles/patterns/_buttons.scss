@@ -1,0 +1,44 @@
+.auth-btn {
+  margin-right: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.custom-btn {
+  background-color: $primary-clr;
+  color: $primary-font-clr;
+  box-shadow: $box-shadow;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  &:hover {
+    background-color: darken($color: $primary-clr, $amount: 10%);
+  }
+}
+
+.express-login-btn {
+  padding: $padding-half;
+}
+
+.oauth-btn:hover {
+  opacity: 0.9;
+}
+
+.feedback-btn {
+  margin: 0;
+}

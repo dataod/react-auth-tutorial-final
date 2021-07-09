@@ -1,0 +1,63 @@
+/* Style the tab */
+.auth-tabs {
+  overflow: hidden;
+  margin: 1rem 0;
+  font-family: $font-sans-serif-mons;
+}
+
+/* Style the buttons inside the tab */
+.auth-tabs button {
+  background-color: inherit;
+  float: left;
+  border-bottom: 4px solid transparent;
+  outline: none;
+  cursor: pointer;
+  padding: $padding;
+  transition: 0.3s;
+  font-size: 1.3rem;
+  font-weight: 500;
+  min-width: 160px;
+}
+
+/* Change background color of buttons on hover */
+.auth-tabs button:hover {
+  background-color: $primary-grey;
+}
+
+/* Create an active/current tablink class */
+.auth-tabs button.active {
+  border-bottom: 4px solid $primary-clr;
+}
+
+/* Style the tab content */
+.auth-tabcontent {
+  display: none;
+}
+
+.express-auth {
+  h4 {
+    color: $secondary-font-clr;
+    margin: 1rem 0;
+  }
+}
+
+.forgot-pw-link {
+  font-size: 0.75rem;
+  color: $link-clr;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.auth-agreement-container {
+  max-width: 350px;
+  font-size: 0.75rem;
+  padding: $padding-half;
+  b {
+    color: $link-clr;
+    font-weight: 500;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
