@@ -9,6 +9,6 @@ This project is ment to run in tandem with [Node.js Express server side auth tut
 To use additional features you'll also need Google developer account with configured Oath credentials and ReCAPTCHA.
 To send emails this tutorial uses Mailgun as an ESP, so you'll need credentials for it on server side.
 
-### `npm instal`
+### `npm install`
 
 ### `npm start`
