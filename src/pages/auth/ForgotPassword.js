@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import logger from "../../components/logger";
 import { Formik, Form } from "formik";
 import axios from "axios";
@@ -6,6 +6,9 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { TextField, Button } from "@material-ui/core";
 import MyTextField from "../../components/forms/elements/MyTextField";
 import { Alert } from "@material-ui/lab";
+import { checkSession } from "../../utils/session";
+import { useHistory } from "react-router-dom";
+import { useUserContext } from "../../context/user_context";
 // ReCAPATCHA
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -17,6 +20,20 @@ export default function ForgotPassword() {
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
   const Captcha = useRef();
+
+  const history = useHistory();
+
+  const {
+    session: { userId },
+  } = useUserContext();
+
+  useEffect(() => {
+    checkSession();
+    if (userId !== null) {
+      history.push("/");
+    }
+
+  }, [userId, history]);
 
   async function postReCAPTCHA(token) {
     setRecaptcha(false);

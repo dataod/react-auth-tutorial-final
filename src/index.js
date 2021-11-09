@@ -9,7 +9,6 @@ import { Provider as ReduxProvider } from "react-redux";
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import rootReducer from "./redux/reducers";
 import logger from "redux-logger";
-import { FeedbackProvider } from "./context/feedback_context";
 
 import { checkSession } from "./utils/session";
 
@@ -27,9 +26,7 @@ const renderApp = (preloadedState) => {
         <ReduxProvider store={store}>
           <ThemeProvider theme={theme}>
             <UserProvider>
-              <FeedbackProvider>
                 <App />
-              </FeedbackProvider>
             </UserProvider>
           </ThemeProvider>
         </ReduxProvider>

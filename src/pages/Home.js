@@ -1,5 +1,4 @@
 import React from "react";
-import Feedback from "../components/common/feedback/Feedback";
 
 export default function Home() {
   return (
@@ -9,8 +8,6 @@ export default function Home() {
         alt="React + Node.js"
         className="react-nodejs-logo"
       />
-
-      <Feedback />
     </div>
   );
 }

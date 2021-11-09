@@ -12,8 +12,6 @@ const userSlice = createSlice({
         email,
         username,
         emailVerified,
-        shippingInfo,
-        feedbackAvailable,
       } = payload;
 
       return {
@@ -23,8 +21,6 @@ const userSlice = createSlice({
           email,
           username,
           emailVerified,
-          shippingInfo,
-          feedbackAvailable,
         },
       };
     },

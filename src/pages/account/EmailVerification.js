@@ -23,6 +23,7 @@ export default function EmailVerification({ match }) {
     if (token) {
       postVerification();
     }
+    // eslint-disable-next-line
   }, [token]);
 
   async function postVerification() {

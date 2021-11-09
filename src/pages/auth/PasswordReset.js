@@ -6,6 +6,9 @@ import PasswordResetForm from "../../components/forms/PasswordResetForm";
 import { useDispatch } from "react-redux";
 import { loginUserActionCreator } from "../../redux/reducers/userReducer";
 import { Alert } from "@material-ui/lab";
+import { checkSession } from "../../utils/session";
+import { useHistory } from "react-router-dom";
+import { useUserContext } from "../../context/user_context";
 
 export default function PasswordReset({ match }) {
   const SESSIONS_API = process.env.REACT_APP_SESSIONS_API;
@@ -14,16 +17,26 @@ export default function PasswordReset({ match }) {
   const [errMsg, setErrMsg] = useState("");
 
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const {
     params: { token },
   } = match;
 
+  const {
+    session: { userId },
+  } = useUserContext();
+
   useEffect(() => {
+    checkSession();
+    if (userId !== null) {
+      history.push("/");
+    }
     if (token) {
       postPasswordReset();
     }
-  }, [token]);
+    // eslint-disable-next-line
+  }, [token, userId, history]);
 
   async function postPasswordReset() {
     setIsLoading(true);

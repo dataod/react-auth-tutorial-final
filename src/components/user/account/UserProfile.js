@@ -24,6 +24,7 @@ export default function UserProfile({ navigator }) {
     } else {
       setVerified("Verified");
     }
+    // eslint-disable-next-line
   }, []);
 
   return (
